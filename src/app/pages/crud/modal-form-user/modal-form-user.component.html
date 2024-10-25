@@ -1,0 +1,81 @@
+<div class="container-fluid p-3">
+  <mat-icon class="float-end hover" (click)="closeModal()">close</mat-icon>
+
+  <h1 class="titulo" *ngIf="editUser">Editar usuário</h1>
+  <h1 class="titulo" *ngIf="!editUser">Cadastrar usuário</h1>
+  <h2 class="subtitulo">Preencha o formulário para salvar o usuário</h2>
+
+  <form class="row" [formGroup]="formUser">
+
+    <div class="col-12 col-md-6" mb-2>
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput formControlName="name" placeholder="Digite o nome">
+        <mat-hint></mat-hint>
+        @if (formUser.controls['name'].invalid) {
+          <mat-error>Por favor digite um nome válido</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-md-6" mb-2>
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Email</mat-label>
+        <input type="text" matInput formControlName="email" placeholder="Digite o email">
+        <mat-hint></mat-hint>
+        @if (formUser.controls['email'].invalid) {
+          <mat-error>Por favor digite um email válido</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-md-6" mb-2>
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Setor</mat-label>
+        <input type="sector" matInput formControlName="sector" placeholder="Digite o setor">
+        <mat-hint></mat-hint>
+        @if (formUser.controls['sector'].invalid) {
+          <mat-error>Por favor digite um Setor válido</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-md-6" mb-2>
+      <mat-form-field class="example-full-width w-100">
+        <mat-label>Cargo</mat-label>
+        <input type="text" matInput formControlName="role" placeholder="Digite o cargo">
+        <mat-hint></mat-hint>
+        @if (formUser.controls['role'].invalid) {
+          <mat-error>Por favor digite um cargo válido</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <!-- BENEFICTS -->
+    <div class="col-12 col-md mb-2">
+      <mat-form-field>
+        <mat-label> <mat-icon>favorite</mat-icon> Plano de Saúde </mat-label>
+        <mat-select formControlName="healthPlan">
+          @for (plan of planSaude; track plan) {
+            <mat-option [value]="plan.descricao">{{plan.descricao}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-md-6 mb-6">
+      <mat-form-field class="w-100">
+        <mat-label> <mat-icon>favorite</mat-icon> Plano Odontológico</mat-label>
+        <mat-select formControlName="dentalPlan">
+          <mat-option *ngFor="let item of planOdonto" [value]="item.descricao">{{item.descricao}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-12">
+      <button class="botao-primario float-end" [disabled]="!formUser.valid" (click)="saveUser()">Salvar usuário</button>
+    </div>
+
+  </form>
+
+</div>
