@@ -1,27 +1,15 @@
-# CrudUsuarios
+🛠️ Projeto: Desenvolvimento de Habilidades com Angular.
+----
+Este é um aplicativo CRUD completo para gerenciamento de usuários, desenvolvido em Angular. O sistema permite realizar as operações principais de criação, leitura, atualização e exclusão de dados de usuários. Projetado com uma interface amigável, o aplicativo possui as seguintes funcionalidades:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+Adicionar Usuários: Formulário para adicionar novos usuários com validação de dados.
+Visualizar Detalhes: Exibição de uma lista com informações resumidas dos usuários, além da possibilidade de ver detalhes de cada um.
+Editar Usuários: Atualização de informações diretamente na interface com confirmação para evitar mudanças indesejadas.
+Excluir Usuários: Remoção de registros com verificação para garantir segurança nas operações.
+O projeto utiliza o Angular CLI para gerenciamento de dependências e é estruturado com componentes modulares, facilitando a manutenção e a escalabilidade.
 
-## Development server
+🎯 Objetivo do Projeto.
+---
+Este projeto de CRUD para gerenciamento de usuários foi desenvolvido com o objetivo de praticar e aprofundar conhecimentos em Angular, abrangendo operações de criação, leitura, atualização e exclusão de dados de usuários.
+Ao construir este sistema, foi possível exercitar habilidades em desenvolvimento front-end, manipulação de dados, criação de interfaces interativas e boas práticas de organização de componentes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
